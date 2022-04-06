@@ -58,7 +58,7 @@ class HotDrinkMachine:
 
         s = input(f"Please pick drink (0-{len(self.factories)-1}): ")
         idx = int(s)
-        s = input(f"Specify amount: ")
+        s = input("Specify amount: ")
         amount = int(s)
         return self.factories[idx][1].prepare(amount)
 
