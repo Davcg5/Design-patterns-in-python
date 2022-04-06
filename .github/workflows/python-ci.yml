@@ -1,21 +1,19 @@
 name: Workflow to run lint
 on:
-    push:
-      branches:
-        -main
-    pull_request:
-      branches:
-        -main
+  push:
+    branches: -main
+  pull_request:
+    branches: -main
 
 jobs:
-    ci-pipeline:
-      name: Ci flow
-      runs-on: ubuntu-18.04
-      steps:
-       - uses: actions/checkout@master
-       - name: Checkout
-         uses: actions/checkout@v2
-         with:
-           python-version: 3.7
-       - name: Lint with flake8
-         run: flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+  ci-pipeline:
+    name: Ci flow
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          python-version: 3.7
+      - name: Lint with flake8
+        run: flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
