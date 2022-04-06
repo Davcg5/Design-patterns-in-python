@@ -1,3 +1,4 @@
+name: Workflow to run lint
 on:
     push:
     branches: [ main ]
@@ -6,10 +7,12 @@ on:
 
 jobs:
     ci-pipeline:
-    runs-on: ubuntu-latest
+    name: Ci flow
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout
       - uses: actions/checkout@master
+      uses: actions/setup-python@v1
       with:
         python-version: 3.7
       - name: Lint with flake8
