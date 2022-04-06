@@ -14,9 +14,9 @@ jobs:
       steps:
       - name: Checkout
       - uses: actions/checkout@master
-        uses: actions/setup-python@v1
-        with:
+      uses: actions/setup-python@v1
+      with:
           python-version: 3.7
       - name: Lint with flake8
-        run: 
+      run: 
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
