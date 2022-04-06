@@ -8,7 +8,7 @@ class Address:
         self.street_address = street_address
 
     def __str__(self):
-        return f'{self.street_address}, {self.city}, {self.country}'
+        return f"{self.street_address}, {self.city}, {self.country}"
 
 
 class Person:
@@ -17,7 +17,7 @@ class Person:
         self.address = address
 
     def __str__(self):
-        return f'{self.name} lives at {self.address}'
+        return f"{self.name} lives at {self.address}"
 
 
 john = Person("John", Address("123 London Road", "London", "UK"))
