@@ -1,5 +1,5 @@
 from enum import Enum
-from math import *
+from math import sin, cos
 
 
 class CoordinateSystem(Enum):

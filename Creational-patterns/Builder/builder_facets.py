@@ -13,7 +13,8 @@ class Person:
     def __str__(self) -> str:
         return (
             f"Address: {self.street_address}, {self.postcode}, {self.city}\n"
-            + f"Employed at {self.company_name} as a {self.postcode} earning {self.annual_income}"
+            + f"Employed at {self.company_name} as a {self.postcode} earning "
+            + "{self.annual_income}"
         )
 
 
