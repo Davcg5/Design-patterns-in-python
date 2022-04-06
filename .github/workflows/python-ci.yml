@@ -1,0 +1,19 @@
+on:
+    push:
+    branches: [ main ]
+    pull_request:
+    branches: [ main ]
+
+jobs:
+    name: CI
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@master
+      with:
+        python-version: 3.7
+      - name: Lint with flake8
+      run: 
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    
