@@ -9,3 +9,8 @@ Use a decorator to avoid that the initializer is called more than once. It is po
 ## Monostate
 
 any instance will have the same data. 
+
+Different realizations
+custom allocator, decorator, metaclass
+
+It has some testability issues
